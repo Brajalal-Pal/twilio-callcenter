@@ -45,6 +45,7 @@ app.use(morgan("dev"));
 app.get("/", (req, res, next) => {
   res.json({
     success: true,
+    queryString: req.query,
   });
 });
 app.get("/login", async (req, res, next) => {
